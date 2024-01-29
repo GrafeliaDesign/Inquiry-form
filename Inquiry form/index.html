@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせフォーム</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Sass/style.css">
+</head>
+
+<body>
+  <h1>お問い合わせフォーム</h1>
+  <div class="Form">
+    <div class="Form-Item">
+      <p class="Form-Item-Label">
+        お名前
+        <span class="Form-Item-Label-Required">必須</span>
+      </p>
+      <input type="text" class="Form-Item-Input" placeholder="氏名をご記入ください">
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">
+        会社名
+        <span class="Form-Item-Label-Required">必須</span>
+      </p>
+      <input type="text" class="Form-Item-Input" placeholder="会社名をご記入ください">
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">
+        メールアドレス
+        <span class="Form-Item-Label-Required">必須</span>
+      </p>
+      <input type="email" class="Form-Item-Input" placeholder="例）example@repeats.jp">
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">
+        電話番号
+        <span class="Form-Item-Label-Required">任意</span>
+      </p>
+      <input type="tel" class="Form-Item-Input" placeholder="例）03-0000-0000">
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label isMsg">
+        問い合わせ内容
+        <span class="Form-Item-Label-Required">任意</span>
+      </p>
+      <textarea class="Form-Item-Textarea" placeholder="お問い合わせ内容をご記入ください"></textarea>
+    </div>
+  </div>
+  <h2><input type="checkbox">プライバシーポリシーに同意の上お問い合わせをお願いいたします</h2>
+  <input type="submit" class="Form-Btn arrow" value="送信する">
+  
+</body>
+</html>
