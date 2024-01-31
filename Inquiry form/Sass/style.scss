@@ -11,18 +11,27 @@ $green: #5ADCD4;
 
 html {
   background-color: $background-color;
+  width: 1100px;
+  height: 1058px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: $base-font;
-  margin-left: 79px;
   font-size: 16px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 h1 {
   font-size: 40px;
-  margin-top: 80px;
-  margin-left: 345px;
+  margin: 80px;
+  text-align: center;
 }
 
 h2 {
@@ -30,17 +39,15 @@ h2 {
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  margin-left: 277px;
+  text-align: center;
+  padding: 50px;
 }
 
 span {
   font-size: 13px;
-  margin-left: 277px;
-  margin-top: -30px;
 }
 
 .Form {
-  display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
@@ -61,10 +68,11 @@ span {
 
 .Form-Item-Label {
   width: 100%;
-  max-width: 248px;
   letter-spacing: 0.05em;
   font-weight: bold;
   font-size: 16px;
+  align-items: center; 
+
 
   @media screen and (max-width: 480px) {
     max-width: inherit;
@@ -88,12 +96,7 @@ span {
   margin-right: 8px;
   padding: 8px;
   width: 48px;
-  display: inline-block;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   background: $green;
   color: $white;
   font-size: 13px;
@@ -110,15 +113,10 @@ span {
 .Form-Item-Textarea {
   border: 1px solid $white;
   border-radius: 6px;
-  margin-left: 250px;
   padding: .9em 2em;
   width: 100%;
-  max-width: 410px;
   background: $white;
   font-size: 16px;
-  width: 680px;
-  height: 45px;
-  flex-shrink: 0;
 
   @media screen and (max-width: 480px) {
     margin-left: 0;
@@ -131,14 +129,7 @@ span {
 .Form-Item-Textarea {
   border: 1px solid $white;
   border-radius: 6px;
-  margin-right: auto;
-  text-align: left; 
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 216px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
+  height: 200px;
   background: $white;
   font-size: 16px;
   font-weight: 500;
@@ -157,7 +148,7 @@ span {
   }
 }
 
-.Form-Btn {
+.arrow-button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -166,6 +157,7 @@ span {
   height: 80px;
   margin: 0 auto;
   padding: .9em 2em;
+  text-decoration: none;
   border: none;
   border-radius: 25px;
   background-color: $white;
@@ -173,61 +165,24 @@ span {
   font-weight: 700;
   font-size: 1em;
 
-  img {
-    margin-left: 10px;
-  }
-
   @media screen and (max-width: 480px) {
     margin-top: 24px;
     padding: 8px;
     width: 160px;
     font-size: 16px;
-
-    img {
-      position: static;
-      transform: none;
-      margin-left: 0;
-      margin-top: 8px;
-    }
   }
 }
 
-.Form-Btn::after {
-  transform: rotate(45deg);
-  width: 5px;
-  height: 5px;
-  margin-left: 10px;
-  border-top: 15px solid #5ADCD4; 
-  border-right: 15px solid #5ADCD4; 
-  content: '';
-}
-
-.Form-Btn:hover {
+.arrow-button:hover {
   background-color: $white;
 }
 
-.arrow {
-  position: relative;
-  display: inline-block;
-  padding: 0 0 0 16px;
-  color: $green;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 15px;
 
-  &::before {
-    left: 4px;
-    width: 5px;
-    height: 1px;
-    background: $green;
-  }
-
-  &::after {
-    left: 4px;
-    width: 4px;
-    height: 4px;
-    border-top: 15px solid $green;
-    border-right: 15px solid $green;
-    transform: rotate(45deg);
-  }
+.arrow-button::after {
+  content: '';
+  position: absolute;
+  content: '\2192'; 
+  top: 50%;
+  left: 85%;
+  transform: translateY(-50%);
 }
