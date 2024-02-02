@@ -11,8 +11,6 @@ $green: #5ADCD4;
 
 html {
   background-color: $background-color;
-  width: 1100px;
-  height: 1058px;
 }
 
 * {
@@ -24,8 +22,6 @@ html {
 body {
   font-family: $base-font;
   font-size: 16px;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 h1 {
@@ -45,6 +41,34 @@ h2 {
 
 span {
   font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translateY(-50%);
+}
+
+.alert-text {
+  position: absolute;
+  left: 30%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal; 
+  color: red;
+}
+
+.alert-checkbox {
+  position: absolute;
+  left: 40%;
+  top: 81.5%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal; 
+  color: red;
+}
+
+#Thank,
+.alert {
+  display: none;
 }
 
 .Form {
@@ -67,7 +91,8 @@ span {
 }
 
 .Form-Item-Label {
-  width: 100%;
+  position: relative;
+  width: 60%;
   letter-spacing: 0.05em;
   font-weight: bold;
   font-size: 16px;
@@ -163,7 +188,7 @@ span {
   background-color: $white;
   color: $green;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 20px;
 
   @media screen and (max-width: 480px) {
     margin-top: 24px;

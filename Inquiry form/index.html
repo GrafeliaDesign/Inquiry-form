@@ -14,49 +14,60 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="Sass/style.css">
+  <script src="Js/jquery-3.7.1.min.js"></script>
+  <script src="Js/index.js"></script>
 </head>
 
 <body>
   <h1>お問い合わせフォーム</h1>
-  <div class="Form">
-    <div class="Form-Item">
-      <p class="Form-Item-Label">
-        お名前
-        <span class="Form-Item-Label-Required">必須</span>
-      </p>
-      <input type="text" class="Form-Item-Input" placeholder="氏名をご記入ください">
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label">
-        会社名
-        <span class="Form-Item-Label-Required">必須</span>
-      </p>
-      <input type="text" class="Form-Item-Input" placeholder="会社名をご記入ください">
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label">
-        メールアドレス
-        <span class="Form-Item-Label-Required">必須</span>
-      </p>
-      <input type="email" class="Form-Item-Input" placeholder="例）example@repeats.jp">
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label">
-        電話番号
-        <span class="Form-Item-Label-Required">任意</span>
-      </p>
-      <input type="tel" class="Form-Item-Input" placeholder="例）03-0000-0000">
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label isMsg">
-        問い合わせ内容
-        <span class="Form-Item-Label-Required">任意</span>
-      </p>
-      <textarea class="Form-Item-Textarea" placeholder="お問い合わせ内容をご記入ください"></textarea>
-    </div>
+  <div class="Form-Item" id="textSection">
+    <p class="Form-Item-Label">
+     お名前
+      <span class="Form-Item-Label-Required">必須</span>
+    </p>
+    <p class="alert alert-text">必須項目です</p>
+    <input type="text" class="Form-Item-Input" placeholder="氏名をご記入ください" id="text">
   </div>
-  <h2><input type="checkbox">プライバシーポリシーに同意の上お問い合わせをお願いいたします</h2>
-  <a href="#" class="arrow-button">送信する</a>
-  
+  <div class="Form-Item" id="companySection">
+    <p class="Form-Item-Label">
+     会社名
+     <span class="Form-Item-Label-Required">必須</span>
+    </p>
+    <p class="alert alert-text">必須項目です</p>
+    <input type="text" class="Form-Item-Input" placeholder="会社名をご記入ください" id="company">
+  </div>
+  <div class="Form-Item" id="emailSection">
+    <p class="Form-Item-Label">
+      メールアドレス
+      <span class="Form-Item-Label-Required">必須</span>
+    </p>
+    <p class="alert alert-text">必須項目です</p>
+    <input type="email" class="Form-Item-Input" placeholder="例）example@repeats.jp" id="email">
+  </div>
+  <div class="Form-Item" id="telSection">
+    <p class="Form-Item-Label">
+      電話番号
+      <span class="Form-Item-Label-Required">任意</span>
+    </p>
+    <input type="tel" class="Form-Item-Input" placeholder="例）03-0000-0000" id="tel">
+  </div>
+  <div class="Form-Item" id="textareaSection">
+    <p class="Form-Item-Label isMsg">
+      問い合わせ内容
+      <span class="Form-Item-Label-Required">任意</span>
+    </p>
+    <textarea class="Form-Item-Textarea" placeholder="お問い合わせ内容をご記入ください" id="textarea"></textarea>
+    <p class="alert alert-text">Alert : TextArea</p>
+  </div>
+  <div id="Check">
+   <h2><input type="checkbox" id="privacyCheckbox">プライバシーポリシーに同意の上お問い合わせをお願いいたします</h2>
+   <p class="alert alert-checkbox">チェックボックスにチェックを入れてください。</p>
+   <a href="#" class="arrow-button" id="submitButton">送信する</a>
+  </div>
+  <div id="Thank">
+    <h1>お問い合わせありがとうございます！</h1>
+    <h2>お問い合わせ内容を確認後に回答いたします。</h2>
+  </div>
+
 </body>
 </html>
